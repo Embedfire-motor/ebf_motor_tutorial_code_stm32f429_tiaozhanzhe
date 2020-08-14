@@ -21,7 +21,7 @@
 #define TEMP_ADC_GPIO_PIN               GPIO_PIN_10
 #define TEMP_ADC_GPIO_CLK_ENABLE()      __GPIOF_CLK_ENABLE()
 
-#define TEMP_ADC_CHANNEL                ADC_CHANNEL_6
+#define TEMP_ADC_CHANNEL                ADC_CHANNEL_8
 
 // ADC DR寄存器宏定义，ADC转换后的数字值则存放在这里
 #define TEMP_ADC_DR_ADDR                ((uint32_t)ADC1+0x4c)
