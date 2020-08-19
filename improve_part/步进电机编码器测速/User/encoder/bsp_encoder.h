@@ -17,14 +17,14 @@
 #define ENCODER_TIM_IRQHandler                 TIM3_IRQHandler
 
 /* 编码器接口引脚 */
-#define ENCODER_TIM_CH1_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOC_CLK_ENABLE()
-#define ENCODER_TIM_CH1_GPIO_PORT              GPIOC
+#define ENCODER_TIM_CH1_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOA_CLK_ENABLE()
+#define ENCODER_TIM_CH1_GPIO_PORT              GPIOA
 #define ENCODER_TIM_CH1_PIN                    GPIO_PIN_6
 #define ENCODER_TIM_CH1_GPIO_AF                GPIO_AF2_TIM3
 
-#define ENCODER_TIM_CH2_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOC_CLK_ENABLE()
-#define ENCODER_TIM_CH2_GPIO_PORT              GPIOC
-#define ENCODER_TIM_CH2_PIN                    GPIO_PIN_7
+#define ENCODER_TIM_CH2_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOB_CLK_ENABLE()
+#define ENCODER_TIM_CH2_GPIO_PORT              GPIOB
+#define ENCODER_TIM_CH2_PIN                    GPIO_PIN_5
 #define ENCODER_TIM_CH2_GPIO_AF                GPIO_AF2_TIM3
 
 /* 编码器接口倍频数 */
