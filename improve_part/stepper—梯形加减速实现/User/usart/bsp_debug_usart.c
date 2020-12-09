@@ -39,8 +39,8 @@ void DEBUG_USART_Config(void)
   
   HAL_UART_Init(&UartHandle);
     
- /*使能串口接收断 */
-  __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);  
+// /*使能串口接收断 */
+//  __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);  
 }
 
 

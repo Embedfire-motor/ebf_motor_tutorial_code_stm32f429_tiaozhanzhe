@@ -163,8 +163,16 @@ void SysTick_Handler(void)
   * @retval None
   */
 
-
-
+extern UART_HandleTypeDef UartHandle;
+void DEBUG_USART_IRQHandler(void)
+{	
+    unsigned char data;
+    
+	if(__HAL_UART_GET_FLAG( &UartHandle, UART_FLAG_RXNE ) != RESET)
+	{	
+			data = ( uint16_t)READ_REG(UartHandle.Instance->DR);
+	}
+}
 
 /**
   * @}
