@@ -61,6 +61,7 @@ static void sd_gpio_config(void)
   HAL_GPIO_Init(SHUTDOWN_GPIO_PORT, &GPIO_InitStruct);
   
   BLDCM_ENABLE_SD();     // Ä¬ÈÏ¿ªÆô
+	HAL_Delay(1);
 }
 
 /**

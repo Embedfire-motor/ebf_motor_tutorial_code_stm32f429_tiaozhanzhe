@@ -21,12 +21,12 @@ typedef struct
 #define MOTOR_TIM_CLK_ENABLE()  			    __TIM8_CLK_ENABLE()
 
 /* 累计 TIM_Period个后产生一个更新或者中断		
-	当定时器从0计数到5599，即为5600次，为一个定时周期 */
-#define PWM_PERIOD_COUNT     (5600)
+	当定时器从0计数到5599，即为6000次，为一个定时周期 */
+#define PWM_PERIOD_COUNT     (6000)
 
 #define PWM_MAX_PERIOD_COUNT    (PWM_PERIOD_COUNT - 100)
 
-/* 高级控制定时器时钟源TIMxCLK = HCLK = 168MHz 
+/* 高级控制定时器时钟源TIMxCLK = HCLK = 180MHz 
 	 设定定时器频率为=TIMxCLK/(PWM_PRESCALER_COUNT+1)/PWM_PERIOD_COUNT = 15KHz*/
 #define PWM_PRESCALER_COUNT     (2)
 
@@ -78,10 +78,10 @@ extern TIM_HandleTypeDef htimx_hall;
 	当定时器从0计数到4999，即为5000次，为一个定时周期 */
 #define HALL_PERIOD_COUNT     (0xFFFF)
 
-/* 高级控制定时器时钟源TIMxCLK = HCLK / 2 = 84MHz
+/* 高级控制定时器时钟源TIMxCLK = HCLK / 2 = 90MHz
 	 设定定时器频率为 = TIMxCLK / (PWM_PRESCALER_COUNT + 1) / PWM_PERIOD_COUNT = 10.01Hz
    周期 T = 100ms */
-#define HALL_PRESCALER_COUNT     (128)
+#define HALL_PRESCALER_COUNT     (137)
 
 /* TIM5 通道 1 引脚 */
 #define HALL_INPUT1_PIN           		    GPIO_PIN_10

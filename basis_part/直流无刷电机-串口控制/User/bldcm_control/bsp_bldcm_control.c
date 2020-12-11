@@ -97,6 +97,7 @@ motor_dir_t get_bldcm_direction(void)
 void set_bldcm_enable(void)
 {
   BLDCM_ENABLE_SD();
+	HAL_Delay(1);
   hall_enable();
 }
 
