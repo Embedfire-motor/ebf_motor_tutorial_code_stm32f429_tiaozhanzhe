@@ -54,6 +54,7 @@ C.浮点运算单元：
 【*】 联系我们
 
 -野火论坛    :http://www.firebbs.cn
--淘宝店铺    :https://fire-stm32.taobao.com
+-资料中心    :http://doc.embedfire.com
+-淘宝店铺    :http://firestm32.taobao.com
 
 /*********************************************************************************************/
