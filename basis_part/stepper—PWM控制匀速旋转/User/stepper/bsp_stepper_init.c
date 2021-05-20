@@ -58,9 +58,9 @@ static void Stepper_GPIO_Config(void)
 	/*设置复用*/
 	GPIO_InitStruct.Pull =GPIO_PULLUP;
 	/*选择要控制的GPIO引脚*/	
-	GPIO_InitStruct.Pin = GENERAL_TIM_CH1_PIN;
+	GPIO_InitStruct.Pin = MOTOR_PUL_PIN;
 	/*Motor 脉冲引脚 初始化*/
-	HAL_GPIO_Init(GENERAL_TIM_CH1_GPIO_PORT, &GPIO_InitStruct);			
+	HAL_GPIO_Init(MOTOR_PUL_PORT, &GPIO_InitStruct);			
 }
 
 

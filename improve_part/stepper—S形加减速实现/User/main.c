@@ -37,7 +37,7 @@ int main(void)
 	SystemClock_Config();
 	/*初始化USART 配置模式为 115200 8-N-1，中断接收*/
 	DEBUG_USART_Config();
-	printf("欢迎使用野火 步进电机 S形加减 例程\r\n");
+	printf("欢迎使用野火 步进电机 S形加减速 例程\r\n");
 	printf("按下按键2 可启动电机\r\n");
 	/*按键中断初始化*/
 	EXTI_Key_Config();

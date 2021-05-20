@@ -45,8 +45,9 @@ int main(void)
 	SystemClock_Config();
 	/*初始化USART 配置模式为 115200 8-N-1，中断接收*/
 	DEBUG_USART_Config();
-	printf("欢迎使用野火 电机开发板 步进电机 编码器测速 例程\r\n");
-	printf("按下按键1修改旋转方向、按键2使能\r\n");	
+	printf("欢迎使用野火 电机开发板 步进电机 位置闭环控制 增量式PID例程\r\n");
+	printf("按下按键1增加目标值、按键2减少目标值\r\n");	
+  printf("其他操作请使用PID调试助手\r\n");
   /* 初始化时间戳 */
   HAL_InitTick(5);
 	/*按键中断初始化*/

@@ -13,19 +13,37 @@
 //引脚定义
 /*******************************************************/
 //Motor 方向 
-#define MOTOR_DIR_PIN                  	GPIO_PIN_1   
-#define MOTOR_DIR_GPIO_PORT            	GPIOE                    
-#define MOTOR_DIR_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOE_CLK_ENABLE()
+#define MOTOR_DIR_PIN                  	GPIO_PIN_14  
+#define MOTOR_DIR_GPIO_PORT            	GPIOB            
+#define MOTOR_DIR_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOB_CLK_ENABLE()
 
 //Motor 使能 
-#define MOTOR_EN_PIN                  	GPIO_PIN_0
-#define MOTOR_EN_GPIO_PORT            	GPIOE                       
-#define MOTOR_EN_GPIO_CLK_ENABLE()    	__HAL_RCC_GPIOE_CLK_ENABLE()
+#define MOTOR_EN_PIN                  	GPIO_PIN_12
+#define MOTOR_EN_GPIO_PORT            	GPIOB                       
+#define MOTOR_EN_GPIO_CLK_ENABLE()    	__HAL_RCC_GPIOB_CLK_ENABLE()
 
 //Motor 脉冲
-#define MOTOR_PUL_PIN                  	GPIO_PIN_5            
-#define MOTOR_PUL_GPIO_PORT            	GPIOI
-#define MOTOR_PUL_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOI_CLK_ENABLE()	
+#define MOTOR_PUL_PIN                  	GPIO_PIN_6            
+#define MOTOR_PUL_GPIO_PORT            	GPIOC
+#define MOTOR_PUL_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOC_CLK_ENABLE()	
+
+
+
+////Motor 方向 
+//#define MOTOR_DIR_PIN                  	GPIO_PIN_1   
+//#define MOTOR_DIR_GPIO_PORT            	GPIOE                    
+//#define MOTOR_DIR_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOE_CLK_ENABLE()
+
+////Motor 使能 
+//#define MOTOR_EN_PIN                  	GPIO_PIN_0
+//#define MOTOR_EN_GPIO_PORT            	GPIOE                       
+//#define MOTOR_EN_GPIO_CLK_ENABLE()    	__HAL_RCC_GPIOE_CLK_ENABLE()
+
+////Motor 脉冲
+//#define MOTOR_PUL_PIN                  	GPIO_PIN_5            
+//#define MOTOR_PUL_GPIO_PORT            	GPIOI
+//#define MOTOR_PUL_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOI_CLK_ENABLE()	
+
 
 /************************************************************/
 #define HIGH 1	//高电平

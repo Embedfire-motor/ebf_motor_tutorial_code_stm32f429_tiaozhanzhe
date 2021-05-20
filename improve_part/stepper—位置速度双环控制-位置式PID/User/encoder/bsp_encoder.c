@@ -38,8 +38,8 @@ static void Encoder_GPIO_Init(void)
   ENCODER_TIM_CH2_GPIO_CLK_ENABLE();
   
   /**TIM3 GPIO Configuration    
-  PC6     ------> TIM3_CH1
-  PC7     ------> TIM3_CH2 
+  PA6     ------> TIM3_CH1
+  PB5     ------> TIM3_CH2 
   */
   /* 设置输入类型 */
   GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
