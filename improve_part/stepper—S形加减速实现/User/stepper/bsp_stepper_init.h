@@ -6,10 +6,39 @@
 
 /*宏定义*/
 /*******************************************************/
-//宏定义对应开发板的接口 1 、2 、3 、4
-#define CHANNEL_SW 1
+//宏定义对应开发板的接口 0、1 、2 、3 、4
+#define CHANNEL_SW 0
 
-#if(CHANNEL_SW == 1)
+#if(CHANNEL_SW == 0)
+//Motor 方向 
+#define MOTOR_DIR_PIN                  	GPIO_PIN_14
+#define MOTOR_DIR_GPIO_PORT            	GPIOB  
+#define MOTOR_DIR_GPIO_CLK_ENABLE()   	__HAL_RCC_GPIOB_CLK_ENABLE()
+
+//Motor 使能 
+#define MOTOR_EN_PIN                  	GPIO_PIN_12
+#define MOTOR_EN_GPIO_PORT            	GPIOB                      
+#define MOTOR_EN_GPIO_CLK_ENABLE()    	__HAL_RCC_GPIOB_CLK_ENABLE()
+
+//Motor 脉冲
+#define MOTOR_PUL_IRQn                  TIM8_CC_IRQn
+#define MOTOR_PUL_IRQHandler            TIM8_CC_IRQHandler
+
+#define MOTOR_PUL_TIM                   TIM8
+#define MOTOR_PUL_CLK_ENABLE()          __TIM8_CLK_ENABLE()
+
+#define MOTOR_PUL_PORT                  GPIOC
+#define MOTOR_PUL_PIN                   GPIO_PIN_6
+#define MOTOR_PUL_GPIO_CLK_ENABLE()     __HAL_RCC_GPIOC_CLK_ENABLE()
+
+#define MOTOR_PUL_GPIO_AF               GPIO_AF3_TIM8
+#define MOTOR_PUL_CHANNEL_x             TIM_CHANNEL_1
+
+#define MOTOR_TIM_IT_CCx                TIM_IT_CC1
+#define MOTOR_TIM_FLAG_CCx              TIM_FLAG_CC1
+
+
+#elif(CHANNEL_SW == 1)
 //Motor 方向 
 #define MOTOR_DIR_PIN                  	GPIO_PIN_7   
 #define MOTOR_DIR_GPIO_PORT            	GPIOE                    

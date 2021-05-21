@@ -42,23 +42,26 @@ int main(void)
 	/*按键中断初始化*/
 	EXTI_Key_Config();
 	/*步进电机初始化*/
-	stepper_Init();	
+	stepper_Init();
 
-	MOTOR_EN(ON);
+  /*使能步进电机*/
+	MOTOR_EN(1);
 	while(1)
 	{     
 		if(print_flag)
 		{
 			/*步进电机加速部分*/
 			stepper_move_S(1,100,0.1f);
-			print_flag=0; 
+			print_flag=0;
 		}
 		if( Stepper.status == AVESPEED)
     {
 			/*步进电机减速部分*/
 			stepper_move_S(100,1,0.1f);
-      Stepper.status = DECEL;    
+      Stepper.status = DECEL;
     }
+    
+    delay_ms(4000);
 	}
 } 	
 
